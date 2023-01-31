@@ -4,10 +4,11 @@ import { FiSettings } from 'react-icons/fi'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 import { Ecommerce, Orders, Calendar, Employees, Pyramid, Stacked, Customers, Kanban, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Line } from './pages'
+import { useStateContext } from './contexts/context-provider';
 import './App.css';
 
 function App() {
-  const activeMenu = true;
+  const { activeMenu } = useStateContext();
   return (
     <div>
       <BrowserRouter>
